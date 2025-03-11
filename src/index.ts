@@ -5,6 +5,7 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import dashboardRoutes from "./routes/dashboardRoutes";
+import prodctRoutes from "./routes/productRoutes";
 
 // Route imports
 
@@ -21,6 +22,7 @@ app.use(cors());
 
 // Routes
 app.use("/dashboard", dashboardRoutes);
+app.use("/products", prodctRoutes)
 
 // Server
 const portNum = process.env.PORT || 3003;
